@@ -31,7 +31,8 @@ Pooled NFT's are no longer owned by individual owners. Anyone with the right amo
 
 The Architecture is uniswap like. Almost everything is done is via a router contract, however protocols and bots can use pool contracts directly for gas savings.
 
-
+| Name | Address |
+| --- | --- |
 |Router | [0x50b0f12da172ad237bb66f9d0cc3b53920b7bfd9](https://etherscan.io/address/0x50b0f12da172ad237bb66f9d0cc3b53920b7bfd9)|
 |Factory | [0xbb08603acfe5ea5bd34474af4c32c931aabd7e17](https://etherscan.io/address/0xbb08603acfe5ea5bd34474af4c32c931aabd7e17)|
 |Demo Pool| [0x85584521e1C762B8e22e03E127E7723CFcf05C4b](https://etherscan.io/address/0x85584521e1C762B8e22e03E127E7723CFcf05C4b)|
@@ -40,9 +41,20 @@ The Architecture is uniswap like. Almost everything is done is via a router cont
 Demo pool tokens can be bought and sold on Uniswap v3.
 
 
+Router functions (make sure to set yourself as the `to` address):
+
+```javascript
+function nftIn(address collection, uint256 tokenId, address to);
+function nftOut(address collection, uint256 tokenId, address to);
+function nftSwap(address collection, uint256 tokenIn, uint256 tokenOut, address to);
+function batchNftIn(address collection, uint256[] calldata tokenIds, address to);
+function batchNftOut(address collection, uint256[] calldata tokenIds, address to);
+function batchNftSwap(address collection, uint256[] calldata tokenIns, uint256[] calldata tokenOuts, address to);
+```
+
 ### Playing with it
 
-There is no UI. It's etherscan all the way. Thing you could try:
+There is no UI right now. It's etherscan all the way. Thing you could try:
 
 - Get an NFT from OpenSea, swap it using the router for an NFT of your choice in the pool.
 - Get 100 pool tokens from uniswap, use them to pull out the NFT you want from pool, via the router.
@@ -56,14 +68,6 @@ Code is MIT.
 If you find a bug, DM me on twitter, plskthx. Rewards in AI generated art.
 
 For discussion on the experiment let's try using GitHub discussions on this repo.
-
-
-
-
-
-
-
-
 
 
 
