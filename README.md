@@ -4,16 +4,14 @@ WETH for NFTs.
 
 Permissionless pooling of NFT's into an ERC20.
 
-_Testing in prod. Not currently audited, use at your own risk._
+_Testing in prod. Use at your own risk._
 
 
 ### Why?
 
-There is a big missing ecosystem at the intersection of NFTs and DeFi.
+There's missing ecosystem at the intersection of NFTs and DeFi. DeFi people want to financialize all assets in the universe, but so haven't had wild success with NFTs. Current solutions in this area are not composable, either horizontally or vertically. Projects built everything in-house, while others shard only single NFT's or shard NFT's as more NFTs. There's tremendous power in permissionless, interoperable base layers - and even more in already being compatible with an entire existing ecosystem.
 
-But current solutions in this area interoperable or composable, either horizontally or vertically. Some have everything be in-house, others shard only single NFT's, and some shard NFT's as more NFTs. There's tremendous power in permissionless, interoperable base layers - and even more in already being compatible with an entire existing ecosystem.
-
-What if any NFT ERC721 contract could be transformed into an ERC20? Then the all the tools already built for DeFi would just work.
+What if any NFT ERC721 contract could be permisionlessly transformed into an ERC20? Then the all the tools already built for DeFi would just work out of the box.
 
 
 ### How?
@@ -24,7 +22,7 @@ There are no fees for going in, out, or swapping. There are no permissions or wh
 
 These pool tokens can then be used on AMMs, defi, lending platforms, perps, whatever.
 
-Pooled NFT's are no longer owned by individual owners. Anyone with the right amount of tokens can grab any NFT from the pool at any time. This is for cattle, not pets. (Maybe it's like a pet store). This instant ability to convert back to an NFT enables lending platform like uses, where selling collateral is a core feature.
+Pooled NFT's are no longer owned by individual owners. Anyone with the right amount of tokens can grab any NFT from the pool at any time. This is for cattle, not pets. The instant ability to convert back to an NFT enables lending platform like uses, where selling collateral is a core feature.
 
 
 ### Registry / Architecture
@@ -38,10 +36,9 @@ The Architecture is uniswap like. Almost everything is done is via a router cont
 |Demo Pool| [0x85584521e1C762B8e22e03E127E7723CFcf05C4b](https://etherscan.io/address/0x85584521e1C762B8e22e03E127E7723CFcf05C4b)|
 |Demo NFT| [Overlords AI](https://opensea.io/collection/overlords-ai)|
 
-Demo pool tokens can be bought and sold on Uniswap v3.
+I've setup a Uniswap v3 pool that can trade the demo NFT collection DividedPool tokens.
 
-
-Router functions (make sure to set yourself as the `to` address):
+Router functions (make sure to set yourself as the `to`). Router requires NFT approvals to get NFTs, and pool ERC20 approval if you are spending your pool tokens.
 
 ```javascript
 function nftIn(address collection, uint256 tokenId, address to);
@@ -65,7 +62,7 @@ There is no UI right now. It's etherscan all the way. Thing you could try:
 
 Code is MIT.
 
-If you find a bug, DM me on twitter, plskthx. Rewards in AI generated art.
+If you find a bug, DM me on twitter. Rewards in AI generated art.
 
 For discussion on the experiment let's try using GitHub discussions on this repo.
 
