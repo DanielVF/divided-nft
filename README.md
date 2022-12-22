@@ -9,7 +9,7 @@ _Testing in prod. Use at your own risk._
 
 ### Why?
 
-There's missing ecosystem at the intersection of NFTs and DeFi. DeFi people want to financialize all assets in the universe, but so haven't had wild success with NFTs. Current solutions in this area are not composable, either horizontally or vertically. Projects built everything in-house, while others shard only single NFT's or shard NFT's as more NFTs. There's tremendous power in permissionless, interoperable base layers - and even more in already being compatible with an entire existing ecosystem.
+There's missing ecosystem at the intersection of NFTs and DeFi. DeFi people want to financialize all assets in the universe, but so haven't had wild success with NFTs. Current solutions in this area are not composable, either horizontally or vertically. Projects built everything in-house, while others shard only single NFT's or shard NFT's as more NFTs. Any solution needs to operate a higher layer than just one NFT. There's tremendous power in permissionless, interoperable base layers - and even more in already being compatible with an entire existing ecosystem.
 
 What if any NFT ERC721 contract could be permisionlessly transformed into an ERC20? Then the all the tools already built for DeFi would just work out of the box.
 
